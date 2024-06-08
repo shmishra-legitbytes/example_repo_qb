@@ -22,14 +22,6 @@ module.exports = {
   },
   darkMode: "class",
   plugins: [nextui({
-    themes: {
-      light: {
-        colors: {
-          primary: {
-            DEFAULT: "#18575D"
-          } ,
-        }
-      }
-    }
+    addCommonColors: true
   })],
 }

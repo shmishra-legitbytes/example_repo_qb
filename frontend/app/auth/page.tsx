@@ -18,7 +18,7 @@ export default function AuthPage() {
     <div className="">
       <div className="flex justify-evenly bg-black gap-8 items-center bg-whit min-h-screen">
         {/* Image  */}
-        <div className="">
+        <div className="hidden sm:visible">
           <Image src={signupImage} alt="Register" className="" />
         </div>
         <>
@@ -39,35 +39,40 @@ export default function AuthPage() {
                 </CardHeader>
               </Card>
             </div>
-            <Card className="max-w-full w-[340px] h-[400px]" shadow="none">
-              <CardBody className="overflow-hidden">
-                <Tabs
-                  className="justify-center"
-                  radius="full"
-                  color="primary"
-                  size="md"
-                  aria-label="Tabs form"
-                  selectedKey={selected}
-                  onSelectionChange={setSelected}
-                >
-                  {/* Register Tab  */}
+            <div className="w-full grid place-items-center">
+              <Card className="max-w-full w-[340px] h-[400px]" shadow="none">
+                <CardBody className="overflow-hidden">
+                  <Tabs
+                    className="justify-center"
+                    radius="full"
+                    color="primary"
+                    size="md"
+                    aria-label="Tabs form"
+                    selectedKey={selected}
+                    onSelectionChange={setSelected}
+                  >
+                    {/* Register Tab  */}
 
-                  <Tab key="register" title="Register" className="">
-                    <RegisterForm
-                      selected={selected}
-                      setSelected={setSelected}
-                    />
-                  </Tab>
-                  {/* Register Tab Ends  */}
+                    <Tab key="register" title="Register" className="">
+                      <RegisterForm
+                        selected={selected}
+                        setSelected={setSelected}
+                      />
+                    </Tab>
+                    {/* Register Tab Ends  */}
 
-                  {/* Login Tab  */}
-                  <Tab key="log-in" title="Log-in">
-                    <LoginForm selected={selected} setSelected={setSelected} />
-                  </Tab>
-                  {/* Login Tab End  */}
-                </Tabs>
-              </CardBody>
-            </Card>
+                    {/* Login Tab  */}
+                    <Tab key="log-in" title="Log-in">
+                      <LoginForm
+                        selected={selected}
+                        setSelected={setSelected}
+                      />
+                    </Tab>
+                    {/* Login Tab End  */}
+                  </Tabs>
+                </CardBody>
+              </Card>
+            </div>
           </div>
         </>
       </div>

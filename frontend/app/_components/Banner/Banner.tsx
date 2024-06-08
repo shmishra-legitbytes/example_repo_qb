@@ -8,7 +8,7 @@ export function Banner() {
   return (
     <div className="w-full relative">
       <div className="absolute w-full z-10 h-full flex flex-col justify-center items-center gap-y-16 bg-[#00000]">
-        <div className="flex flex-col justify-center items-center text-white">
+        <div className="flex flex-col justify-center items-center text-white p-4">
           <h1 className="font-bold text-5xl tracking-wider">
             SHARING KNOWLEDGE
           </h1>

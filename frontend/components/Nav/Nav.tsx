@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { NavbarTheme } from "@/config/NavbarTheme";
 import {
   Navbar,
   NavbarBrand,
@@ -18,9 +17,13 @@ const navlinks = ["Home", "Questions", "Create Content", "Tutoring"];
 
 //Navigation Bar
 export function Nav(): React.JSX.Element {
+  const pathname = usePathname();
   return (
     <div>
-      <Navbar className="" shouldHideOnScroll={true}>
+      <Navbar
+        className={clsx(pathname === "/auth" && "hidden")}
+        shouldHideOnScroll={true}
+      >
         <NavbarContent>
           <NavbarBrand className="flex flex-col justify-start text-start">
             <p className="font-bold tracking-wide text-lg ">Question Bucket</p>

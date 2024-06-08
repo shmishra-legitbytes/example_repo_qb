@@ -1,9 +1,9 @@
-import { BucketCard } from "@/components/BucketCard/BucketCard";
+import { Banner } from "./_components/Banner/Banner";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-    <BucketCard />
-    </>
+    <div>
+      <Banner />
+    </div>
   );
 }
